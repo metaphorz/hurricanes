@@ -1,0 +1,45 @@
+# Multiple Hurricane Tracks Visualization Requirements
+
+## Project Overview
+This project creates an interactive visualization of multiple hurricane tracks using Python and Folium. The visualization displays the paths of three significant hurricanes (Irene 2011, Andrew 1992, and Ian 2022) with color-coded intensity segments, detailed tooltips, popups, and an information panel.
+
+## Requirements Implemented
+
+1. Data Processing:
+   - Successfully extracts data from the provided CSV file (ibtracs.NA.list.v04r01.csv)
+   - Filters records matching each hurricane name and season year
+   - Extracts and processes fields: NAME, LAT, LON, USA_SSHS (Saffir-Simpson hurricane scale), USA_WIND (wind speed), and ISO_TIME
+   - Sorts each hurricane's track points chronologically by ISO_TIME
+   - Handles missing or non-numeric values appropriately
+
+2. Visualization Features:
+   - Creates an interactive map showing all three hurricane tracks simultaneously
+   - Displays each track as a continuous set of line segments without loops
+   - Colors line segments according to hurricane intensity (Saffir-Simpson category)
+   - Adds markers for key points (start, middle, end) with detailed popup information
+   - Implements tooltips on track segments showing storm name, date/time, wind speed, and location
+   - Includes a legend explaining the hurricane category colors
+   - Features a persistent information panel listing all hurricanes with their peak intensities
+
+3. User Interface:
+   - Provides intuitive navigation with hover tooltips and click popups
+   - Includes clear instructions for interacting with the visualization
+   - Automatically adjusts map bounds to show all hurricane tracks
+   - Displays a title and legend for easy reference
+
+4. Output:
+   - Saves the visualization as an HTML file (multiple_hurricane_tracks_final.html)
+   - Can be viewed in any modern web browser
+   - No external dependencies required for viewing
+
+## Dependencies
+- Python 3.x
+- pandas
+- numpy
+- folium
+- datetime
+
+## Files
+- multi_hurricane_visualization_final.py: Main script to generate the visualization
+- ibtracs.NA.list.v04r01.csv: Source data file containing hurricane track information
+- multiple_hurricane_tracks_final.html: Output visualization file
